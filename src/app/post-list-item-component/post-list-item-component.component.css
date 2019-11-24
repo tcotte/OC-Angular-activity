@@ -2,7 +2,10 @@
   margin-left: 20px;
 }
 
-
+#remove{
+  position: absolute;
+  right: 10px;
+}
 
 .likeNumber{
   margin-left: 20px;
