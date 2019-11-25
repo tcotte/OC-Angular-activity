@@ -8,16 +8,28 @@ import { PostListComponentComponent } from './post-list-component/post-list-comp
 import { PostService } from './services/post.service';
 import { FormsModule } from '@angular/forms';
 import { NewPostComponentComponent } from './new-post-component/new-post-component.component';
+import {RouterModule, Routes} from '@angular/router';
+import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
+
+const appRoutes: Routes = [
+  { path: 'posts', component: PostListComponentComponent},
+  { path: 'newPost', component: NewPostComponentComponent},
+  { path: '', component: PostListComponentComponent },
+  { path: 'not-found', component: FourOhFourComponent},
+  { path: '**', redirectTo: 'not-found'}
+]
 
 @NgModule({
   declarations: [
     AppComponent,
     PostListItemComponentComponent,
     PostListComponentComponent,
-    NewPostComponentComponent
+    NewPostComponentComponent,
+    FourOhFourComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [
     PostService

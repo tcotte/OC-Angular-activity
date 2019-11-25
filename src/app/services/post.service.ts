@@ -4,7 +4,7 @@ export class PostService {
 
   postsSubject = new Subject<any[]>();
 
-  private posts = [
+  posts = [
     {
       title: 'Mon premier post',
       paragraph : 'paragraph1',
