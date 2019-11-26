@@ -52,4 +52,9 @@ export class PostService {
     this.posts.push(postObject);
     this.emitPostSubject();
   }
+
+  RemovePost(index: number) {
+    this.posts.splice(index, 1);
+    this.emitPostSubject();
+  }
 }

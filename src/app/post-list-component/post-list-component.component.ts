@@ -21,4 +21,5 @@ export class PostListComponentComponent implements OnInit {
     );
     this.postService.emitPostSubject();
   }
+  
 }
