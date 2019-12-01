@@ -31,10 +31,12 @@ export class PostService {
 
   LikeOne(index: number) {
     this.posts[index].loveIts = this.posts[index].loveIts + 1;
+    this.emitPostSubject();
   }
 
   DislikeOne(index: number) {
     this.posts[index].loveIts = this.posts[index].loveIts - 1;
+    this.emitPostSubject();
   }
 
   addPost(title: string, paragraph: string, loveIts: number) {
